@@ -18,3 +18,6 @@ class employeeList(APIView):
 
     def push(self):
         pass
+
+def index(request):
+    return render(request,'web_app/index.html')
