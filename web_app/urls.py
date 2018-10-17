@@ -3,5 +3,6 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from web_app import views
 
 urlpatterns = [
-    url(r'^$',views.index , name='index')
+    url(r'^$',views.index , name='index'),
+    url(r'^employees/',views.employeeList.as_view()),
 ]
