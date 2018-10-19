@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from web_app import views
+from web_app import views as web_app_views
 
 urlpatterns = [
-    url(r'^$',views.index , name='index'),
-    url(r'^employees/',views.employeeList.as_view()),
+    url(r'^$',web_app_views.home , name='web_app-home'),
+    url(r'^employees/',web_app_views.employeeList.as_view()),
 ]

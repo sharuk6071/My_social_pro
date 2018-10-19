@@ -19,5 +19,5 @@ class employeeList(APIView):
     def push(self):
         pass
 
-def index(request):
-    return render(request,'web_app/index.html')
+def home(request):
+    return render(request,'web_app/home.html')

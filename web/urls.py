@@ -17,8 +17,10 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from web_app import views
+from web_users import views as web_users_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('web_app.urls')),
+    url(r'^register/',include('web_users.urls')),
 ]
