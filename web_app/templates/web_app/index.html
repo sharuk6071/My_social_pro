@@ -10,21 +10,28 @@
     <header class="site-header">
       <!-- A grey horizontal navbar that becomes vertical on small screens -->
       <nav class="navbar navbar-expand-sm bg-light">
-
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'web_app-home' %}">home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'register' %}">Sign up</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}">Log in</a>
-    </li>
-  </ul>
-
-</nav>
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{% url 'web_app-home' %}">Django Blog</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{% url 'web_app-home' %}">Home</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">pofile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <div class="container">
       <div class="jumbotron">

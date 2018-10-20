@@ -4,5 +4,5 @@ from web_app import views as web_app_views
 
 urlpatterns = [
     url(r'^$',web_app_views.home , name='web_app-home'),
-    url(r'^employees/',web_app_views.employeeList.as_view()),
-]
+    url(r'^api/',web_app_views.employeeList.as_view()),
+    ]
