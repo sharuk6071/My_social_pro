@@ -1,3 +1,5 @@
+
+
 """
 Django settings for web project.
 
@@ -124,8 +126,11 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL='web_app-home'
 LOGIN_URl='login'
+LOG_OUT='logout'
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kskr777@gmail.com'
+EMAIL_HOST_USER = 'Kskr777@gmail.com'
+DEFAULT_FROM_EMAIL = 'Sai kiran python web devloper @bluegen <Kskr777@gmail.com>'
 EMAIL_HOST_PASSWORD = '8466022443'
 EMAIL_PORT = 587
