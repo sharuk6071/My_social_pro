@@ -19,11 +19,20 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from web_app import views
 from web_users import views as web_users_views
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('web_app.urls')),
     url(r'',include('web_users.urls')),
     url(r'login/', auth_views.LoginView.as_view(template_name='web_users/login.html'), name='login'),
-    url(r'logout/', auth_views.LoginView.as_view(template_name='web_users/logout.html'), name='logout'),
-]
+    url(r'logout/', auth_views.LogoutView.as_view(template_name='web_users/logout.html'), name='logout'),
+] #{+ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)}
+
+# actuall wew can add above code but i am adding below bcoz its use when we r in debug state .So,
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+    # it allows our  midea to browser
