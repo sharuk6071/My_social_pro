@@ -10,13 +10,14 @@
         <h2 class="account-heading"> {{ user.username }} </h2>
         <p class="text-secondary"> {{ user.email }}</p>
       </div>
-    
+
       <img style=" border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;" class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;" class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+    </div>
   <!-- profile pic path -- >
     </div>
     <!-- FORM HERE -->
-  </div>
+</div>
 {% endblock content %}
