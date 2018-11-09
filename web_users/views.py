@@ -12,6 +12,7 @@ from .tokens import account_activation_token
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
+from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
 
 # Create your views here.
 def register(request):
@@ -43,6 +44,13 @@ def register(request):
     return render(request,'web_users/register.html',{'form':form})
 @login_required
 def profile(request):
+    u_form = UserUpdateForm
+    p_form = ProfileUpdateForm
+
+    context = {
+        'u_form':u_form,
+        'p_form':p_form,
+    }
     return render(request,'web_users/profile.html')
 
 def activate(request, uidb64, token):

@@ -136,7 +136,7 @@ LOG_OUT='logout'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'Kskr777@gmail.com'
+EMAIL_HOST_USER = 'Kskr6071@gmail.com'
 DEFAULT_FROM_EMAIL = 'Sai kiran python web devloper @bluegen <Kskr777@gmail.com>'
-EMAIL_HOST_PASSWORD = '8466022443'
+EMAIL_HOST_PASSWORD = 'Reddy@6085'
 EMAIL_PORT = 587
